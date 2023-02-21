@@ -1,0 +1,243 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 1.5rem;
+    height: 10vh;
+}
+body {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-color: #201f1f !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home_link {
+    text-decoration: none;
+    color: white;
+}
+.main_layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form starting stylings ------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 65%;
+    height: 80vh;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+    width: 100%;
+}
+input {
+    position: relative;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background-color: #201f1f !important;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    /*color: #5264AE;*/
+    /*color: #1DB954;*/
+    color: #fff;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    /*width: 300px;*/
+    /*width: 40rem;*/
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    /*background: #5264AE;*/
+    /*background: #1DB954;*/
+    background: #fff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        /*background: #5264AE;*/
+        background: #fff;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+/*Form styling end*/
+
+footer {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-top: solid white 2px;
+    width: 100%;
+    opacity: 0.8;
+    color: white;
+    height: 10vh;
+}
+
+/*button style start*/
+.calculate-button {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 0.5rem;
+    width: 100%;
+    -webkit-transition-duration: 0.4s;
+}
+
+.calculate-button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #000;
+}
+/*button style end*/
+
+.workout_sessions_container {
+    width: 65%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.table_header {
+    background-color: lightgrey;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    display:flex;
+    padding: 1rem;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    /*box-shadow: 0px .5px 2.5px 1px #97B1BF;*/
+    /*border-radius: .5rem;*/
+    border-top: solid white 1px;
+    /*border-bottom: solid white 1px;*/
+    color: white;
+    background-color: transparent;
+}
+
+.col {
+    flex-basis: 25%;
+    font-weight: bolder;
+}
+/*Bench sessions style end*/

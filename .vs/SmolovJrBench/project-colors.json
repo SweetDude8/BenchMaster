@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c409b845-06e3-42b1-bb85-04b9adebc9c6": {
+      "ProjectGuid": "c409b845-06e3-42b1-bb85-04b9adebc9c6",
+      "DisplayName": "SmolovJrBench",
+      "ColorIndex": 0
+    },
+    "e4a9eca3-72e7-4792-9a1a-389c1623a900": {
+      "ProjectGuid": "e4a9eca3-72e7-4792-9a1a-389c1623a900",
+      "DisplayName": "ConsoleAppToTestFunctions",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
