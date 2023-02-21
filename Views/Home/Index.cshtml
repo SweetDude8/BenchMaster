@@ -1,0 +1,51 @@
+﻿@model SmolovJrBench.Models.BenchDataModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<form id="smolow_jr_form" asp-action="SmolovJrAllBenchSessions" method="POST">
+    @if (!Model.HasErrors)
+    {
+        <div class="group">      
+            <input id="max_bench_weight" type="text" value="" autocomplete="off" required asp-for="MaxBenchWeight">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Kg</label>
+        </div>
+    }
+    else
+    {
+        <div class="group">      
+            <input id="max_bench_weight" type="text" value="" autocomplete="off" required asp-for="MaxBenchWeight">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error_span" style="color: red;">@Model.ValidationErrors.FirstOrDefault()</span>
+            <label>Kg</label>
+        </div>
+    }
+
+    @if (!Model.HasErrors)
+    {
+        <div class="group">      
+            <input id="weekly_increment" type="text" value="" autocomplete="off" required asp-for="Increment">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Increment</label>
+        </div>
+    }
+    else
+    {
+        <div class="group">      
+            <input id="weekly_increment" type="text" value="" autocomplete="off" required asp-for="Increment">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error_span" style="color: red;">@Model.ValidationErrors.FirstOrDefault()</span>
+            <label>Increment</label>
+        </div>
+    }
+        
+    <div class=group>
+        <button id="submitBtn" type="submit" class="calculate-button">Calculate</button>
+    </div>
+</form>
